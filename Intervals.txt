@@ -1,0 +1,111 @@
+Intervals
+---------
+
+- Lets say we have a set of elements in sequence : {2,5,8,11,...,35}
+    - How do we know how many elements are in the sequence? There are 2 ways; Counting, and mapping.
+
+
+--- Counting --- 
+----------------
+    - We can count the number of steps. Going from one number in the sequence, to  the next,
+        is a step. The absolute difference between those two numbers, is the step size.
+    - Hence, the step size for this sequence: {2,5,8,11,....,35} is 3; s=3.
+    - Step size can also be negative if teh sequence decreases in order.
+
+    - To find the total number of steps ina sequence, we subtract the first element in the seqeunce,
+        from the last element, and devide the result by the ABSOLUTE VALUE of the step size, s.
+            --- LAST ELEMENT = 35
+            --- FIRST ELEMENT = 2
+            --- STEP SIZE = 3
+
+            (LAST - FIRST) / |STEP SIZE|
+
+            (35 - 2) / |3| = 11 total steps
+
+            *** Think of the number of steps as the total number of movements
+                you make from the first element in the sequence, to reach the last ***
+
+    - Now, how does the total number of steps in the seqeunce help with finding out how many
+        elements are in the set?
+            - The total number of elements in the set is always + 1 more than the total number of steps.
+            - Therefore, 11 + 1 = 12, so we hve 12 total elements in the set of {2,5,8,11,...,35}
+
+            *** Example ***
+
+                Let our set S = {1,2,3,4,5,6,7,8,9,10}
+                    - Step size = 1;
+                    - total number of steps = (last - first) / step size
+                            (10 - 1) / 1 = 9 total number of steps;
+                            takes us 9 movements to get from 1 to 10.
+                    - Number of elements in the set is 10
+
+    - This allows us to generalise the format of elements in a sequence;
+        - Suppose our set is : {2,4,6,8,10,12,14,16,18,20}
+        - our step size (s) is  = 2; then our total number of steps = (20 - 2)/2 = 9 total steps
+        - now to generalise the format of the sequence, lets say, the first element in the sequence is a (which equals 2)
+
+        {a,4,6,8,10,12,14,16,18,20}
+
+        but we also want to generalise the format of all the other elements in the sequence.
+        To get to 4, we do a + 2; but know our step size (s) is 2, so 4  = a+s 
+
+        Therefore:
+            {a,a+s,6,8,10,12,14,16,18,20}
+        
+        We repeat the same for 6; to get to 6, twice the step size (s), to a, so 6 = a + 2s (2 + 2(2))
+
+        Therefore:
+            {a,a+s,a+2s,8,10,12,14,16,18,20}
+        
+        And we repeat the same for all other elements in the sequence till we have : 
+            {a, a+s , a+2s , a+3s, a+4s , a+5s, a+6s, a+7s, a+8s, a+9s}
+
+        Which is good but,  what we won't always know what the last element is in a sequence, or how many
+        elements are in the sequence, hence, we must find a way to generalise.
+
+        We know that at least the first 3 elements must resembles something like this:
+            {a, a+s, a+2s, something, something, something,..., lastSomething}
+
+            so: {a, a+s, a+2s,..., lastElement}
+
+            Now, lets focus on the last element in the previous set: a+9s
+                We know *a* is the first element
+                We know *s* is the step size; but what does the number 9 represent?
+
+                    (20 - 2) / 2 = 9
+                    The number 9 represents the total number of steps in the intial seqeunce: {2,4,6,8,10,12,14,16,18,20}
+
+                    And, since we know the total number of steps is the (lastElement - firstElement) / stepSize
+                    replace 9 in (a + 9s) with k (which is the total number of steps)
+
+                    so we have (a + ks), however, we'd like to rewrite this in terms of number of elements in the set
+
+                    We know the number of elements in the set is always 1 greater than the total number of steps
+
+                    Which means that the total number of steps, is always 1 less than the total number of elements
+
+                    Threfore, if n represents the total number of elements, the total number of steps will be (n - 1)
+
+                    Leaving our last element in the set to be:
+
+                        a + (n - 1)s
+
+                    our final generalised set notation is:
+
+                        {a, a+s, a+2s,..., a+(n-1)s}    And we're done! lmao.
+
+
+
+
+--- Mapping ---
+---------------
+
+    - Given a sequence {a, a+s, a+2s,..., a+(n-1)s}, can you find a equation that maps the sequecne
+        to a sequential set of consecutive numbers starting from 1?
+
+    - The known formulae for this is :
+        f(x) =  1 + (x-a)/s
+    
+   - Such seqeunces have a last element b (which is a+(n-1)s), first element a, and step size s,
+    number of elements f(b)
+                          

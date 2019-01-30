@@ -1,0 +1,20 @@
+--- ARITHMETIC SERIES ---
+-------------------------
+
+Suppose we had a sum of : 2 +  5 + 8 + 11 + ... + 35
+    - We can generalise that sum as :
+        a + (a + s) + (a + 2s) + (a + 3s) + ... + [a+(n-1)s]
+    or
+        a + (a + s) + (a + 2s) + (a + 3s) + ... + b
+            with b equalling [a + (n-1)s]
+
+    There'd be 3 methods to compute the sum; Gaussian, Mapping, and Re-writing
+
+        1) --- Gauss ---
+            Consider the SUM, and hte SUM in REVERSE:
+
+            a + (a+s) + (a+2s) + ... + b (regular from first element to last)
+        and
+            b - (b-s) - (b-2s) - ... - a (last to first using subtraction)
+            
+

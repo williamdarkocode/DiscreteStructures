@@ -1,0 +1,31 @@
+Distributive Law
+-----------------
+
+a(b+c) = ab + ac
+
+Eg: sum of numbers in a 10 X 10 times table
+-----------------------------------------
+
+Set of:
+    products in 1 times table: {1,2,3,4,5,6,7,8,9,10}
+    products in 2 times table: {2,4,6,8,10,12,14,16,18,20}
+    products in 3 times table: {3,6,9,12,15,18,21,24,27,30}
+    .
+    .
+    .
+    prodducts in 10 times table: {10,20,30,40,50,60,70,80,90,100}
+ 
+- Can observe that each product set, 2 to 10, are essentially multiples of the set of products of the 1 times table
+    -  Let the Sum of the elements in the set of 1 times table products = S;
+    - given that each subsequent set is a multiple of the 1 times table set, the sums of the other sets are the following:
+        - 2S, 3S, 4S, 5S, 6S, ... , 10S
+        - We can factor out the S, given the Distributive Law, and remained with:
+            - S(1 + 2 + 3 + ... + 10) for the sum of all products in the 10 X 10 times table;
+            - Since S (sum of products in the 1 times table) also equals: (1+2+3+...+10),
+                we can say the sum of all products in the times table is :
+                (1 + 2 + 3 + ... + 10)^2
+
+- Formulae for the sum of numbers from 1 to n is n(n+1)/2
+    - Therefore, the sum of all products in the times table is [10(10+1)/2]^2
+
+
