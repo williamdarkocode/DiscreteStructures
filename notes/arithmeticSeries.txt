@@ -13,8 +13,37 @@ Suppose we had a sum of : 2 +  5 + 8 + 11 + ... + 35
         1) --- Gauss ---
             Consider the SUM, and hte SUM in REVERSE:
 
-            a + (a+s) + (a+2s) + ... + b (regular from first element to last)
-        and
-            b - (b-s) - (b-2s) - ... - a (last to first using subtraction)
+            Sn = {a, a+s, a+2s, a+3s, ... , a+(n-1)s = b}
+    reversed
+            Sn = {a+(n-1)s, a+(n-2)s, a+(n-3)s, a+(n-4)s, ... , a}
+
+    Combine both sets, COLUMN BY COLUMN
+            2Sn = 2a+(n-1)s, 2a+(n-1)s, 2a+(n-1)s, ... , 2a+(n-1)s
+
+    simplify
+            2Sn = n(2a+(n-1)s) ----> since we're doing 2a+(n-1)s n number of times
+
+    Therefore:
+            Sn = [n(2a+(n-1)s)] / 2
+
+
+
+
+        2) --- Mapping ---
+
+        Map Sequence 1, 2, 3, ..., n using function:
+            y = f(x) = 1+(x-a)/s
+
+            x = (sy - 1) + a
+
+            Each element of 1,2,3,...b
+            must map to an elment x of a, a+s, a+2s...
+
+            Since the sum of elements: 1,2,3,..,b is:
+                b(b+1)/2
+            The sum of elements: a, a+s, a+2s,..., a+(n-1)s 
             
+
+
+
 
